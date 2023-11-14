@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <title>Formular</title>
 </head>
 <body>
     
+    <div id="main">
+        <h1>Formularstyling</h1>
+        <form action="formilar.php" method="post"enctype="multipart/form-data">
+            <div id="formular">
+                <label for="vorname">Vorname</label>
+                <input type="text" id="vorname" name="vorname" placeholder="Vorname">
+
+                <label for="nachname">Nachname</label>
+                <input type="text" id="nachname" name="nachname" placeholder="Nachname">
+
+                <label for="klasse">Klasse</label>
+                <input type="text" id="klasse" name="klasse" placeholder="Klasse">
+
+                <label for="mail">E-Mail</label>
+                <input type="email" id="mail" name="mail" placeholder="E-Mail Adresse">
+
+                <!-- Dropdownmenü - FACHRICHTUNG -->
+                <label for="fach">Fachrichtung</label>
+                <select name="fach" id="fach" size="1">
+                    <option value="option01">Informatik</option>
+                    <option value="option02">Mechatronik</option>
+                    <option value="option03">Elektrotechnik</option>
+                    <option value="option04">Maschinenbau</option>
+                    <option value="option05">Metallbau</option>
+                </select>
+                <!-- Checkboxen - FÄCHER -->
+
+                <label for="faecher">Fächer</label>
+                <div id="faecher">
+                    <input type="checkbox" name="checkbox01" id="checkbox01" value="v01">
+                    <label for="checkbox01">Mathe</label>
+
+                    <input type="checkbox" name="checkbox02" id="checkbox02" value="v02">
+                    <label for="checkbox02">Datenbanken</label>
+
+                    <input type="checkbox" name="checkbox03" id="checkbox03" value="v03">
+                    <label for="checkbox03">Programmierung</label>
+
+                    <input type="checkbox" name="checkbox04" id="checkbox04" value="v04">
+                    <label for="checkbox04">Internettechnologien</label>
+
+                    <input type="checkbox" name="checkbox05" id="checkbox05" value="v05">
+                    <label for="checkbox05">Betriebssysteme und Administration</label>
+
+                    <input type="checkbox" name="checkbox06" id="checkbox06" value="v06">
+                    <label for="checkbox05">Kommunikations- und Netzwerktechnik</label>
+
+                    <input type="checkbox" name="checkbox07" id="checkbox07" value="v07">
+                    <label for="checkbox05">Anwendungsentwicklung für mobile Endgeräte</label>
+                </div>
+                
+                <!-- Radioboxen - TAG/ABENDS -->
+
+                <label for="lessontime">Tag-/ Abendunterricht</label>
+                <div id="lessontime">
+                    <input type="radio" id="day" name="lessontime" value="day" checked>
+                    <label for="day">Tagesunterricht</label>
+
+                    <input type="radio" id="evening" name="lessontime" value="evening">
+                    <label for="evening">Abendunterricht</label>
+
+                </div>
+
+                 
+            </div> 
+            <!-- Button - ABSENDEN -->
+            <input class="button" type="submit" value="Auswahl absenden"> 
+             
+        </form>    
+    </div>
+
 </body>
 </html>
