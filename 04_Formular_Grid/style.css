@@ -61,8 +61,9 @@
         
     }
 
-    #formular label{
+    #formular>label{
         text-align: left;
+        font-weight: bold;
     }
 
 }
