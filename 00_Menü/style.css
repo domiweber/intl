@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+nav{
+    display: inline-block;
+}
+
+
+
+nav ul li{
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    background-color: aqua;
+    
+    
+}
+/* 1. Untermenü */
+nav ul li ul{
+    position: relative;
+    top:2.2em;
+    left: 0;
+}
+
+nav ul li ul li{
+    display: none;
+    
+}
+
+nav ul li:hover ul{
+    
+    position: absolute;
+    
+}
+
+nav ul li:hover ul li{
+    display: block;
+  
+    background-color: bisque;    
+}
+
+/* 2. Untermenü */
+
+nav ul li ul li ul{
+    display: none;
+}
+
+nav ul li ul li:hover{
+    position: relative;
+    background-color: blueviolet;
+}
+
+nav ul li ul li:hover ul{
+    display: block;
+    
+    
+}
+
+nav ul li ul li:hover ul{
+    left: 100%;
+    top: 0em;
+    z-index: 100;
+
+
+}
