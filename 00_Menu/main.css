@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+li{
+    background-color: cyan;
+}
+
+li:hover{
+    background-color: bisque;
+}
+
+nav>ul>li{
+    display: inline-block;
+}
+
+ul li{
+    position: relative;
+}
+
+li ul{
+    position: absolute;
+    display: none;
+}
+
+li:hover>ul{
+    display: block;
+}
+
+nav>ul{
+    top: 100%;
+    left: 0;
+}
+
+li ul li ul{
+    top:0;
+    left:100%;
+}
+
+
+
+
+
+

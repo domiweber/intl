@@ -1,0 +1,29 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 1em;
+    padding: 0;
+    box-sizing: border-box;
+    column-gap: 1em;
+    row-gap: 1em;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+
+}
+
+.pic{
+    width: 100%;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+
+@media screen and (max-width:800px) {
+    body{
+        grid-template-columns: repeat(2,1fr);
+    }
+  
+}

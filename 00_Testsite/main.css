@@ -1,0 +1,18 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+
+}
+
+div{
+    
+    border: solid 1px black;
+    
+}
+
+div:nth-child(odd){
+    background-color: aqua;
+}
+

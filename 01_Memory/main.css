@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#header{
+    text-align: center;
+}
+
+div{
+    border: 1px solid black;
+    margin-top: 1em;
+}
+
+#menu{
+    position: relative;
+    list-style: none;
+    padding-left: 2em;
+    font-size: 15px;
+    
+}
+
+
+#menu ul li{
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px;
+    background-color: aqua;    
+    
+}
+
+#menu ul li ul{
+    display: none;
+    position: absolute;
+    margin-left: -10px;
+}
+
+#menu ul li:hover ul{
+    display: block;
+
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+    margin-top: 0;
+    border: none;
+}
+
+#spielfeld{
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background-color: green;
+
+    
+
+}
+
+img{
+    width: 100%;
+    padding: 2px;
+}
