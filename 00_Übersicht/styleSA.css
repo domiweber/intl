@@ -1,0 +1,135 @@
+* {
+    /*Immer beim Erstellen von CSS*/
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*--------------------------------------01_Grids------------------------------------------------------------------------------------*/
+#grid1 {
+    display: grid;                                          /*Erstellt Grid*/
+    grid-template-columns: 1fr 2fr auto 100px;              /*fr=Fraction, auto=passt Breite an Inhalt an, px=feste Größe*/
+    grid-template-columns: repeat(auto-fill, 200px);        /*Es werden so viele Inhalte mit 200px nebeneinander erzeugt wie möglich*/
+    grid-template-columns: minmax(100px, 300px);            /*Spaltenbreite mindestens 100px, maximal 300px*/
+    grid-template-rows: auto auto;                          /*Siehe grid-template-columns*/
+    column-gap: 2em;                                        /*Spaltenabstand*/
+    row-gap: 1em;                                           /*Reihenabstand*/
+    justify-items: center;                                  /*horizontale Ausrichtung eines Elements*/
+    align-items: center;                                    /*vertikalte Ausrichtung eines Elements*/
+}
+
+#grid1>div {
+    align-self: baseline;                                   /*Einzelne Elemente überschreiben*/
+    justify-self: right;
+    grid-column: 4 / 6;                                     /*Element erstreckt sich von Spalte 4-6*/
+    grid-row: 4 / -1;                                       /*EleElement erstreckt sich von Spalte 4-Ende*/
+    /*oder*/
+    grid-column: 4 / span 2;
+    grid-row: 4 / -1;
+    /*oder*/
+    grid-area: 4 / 4 / span2 / -1;                          /*grid-row-start, grid-column-start, grid-row-end grid-column-end*/
+}
+
+
+
+/*---------------------------------------------------------Media Queries------------------------------------------------------------------------*/
+@media screen and (orientation:portrait) and (max-width: 800px) {   /*orientation:portrait = Bei Hochformat; max-width:800px = Bis zu einer einer Breite<= 800px*/               
+    #rahmen {
+        /*CSS-Code*/
+    }    
+}
+
+@media screen and (orientation:landscape) and (max-height: 500px) { /*orientation:landscape = Bei Querformat; max-height:800px = Bis zu einer einer Höhe<= 800px*/               
+    #rahmen {
+        /*CSS-Code*/
+    }
+}
+
+
+/*-----------------------------------------------Positionen---------------------------------------------------------------------------------------*/
+/*Floating Boxes*/
+#box1{
+    float:left;                                             /*An der nächsten Freien Stelle links anschließen; Weitere Möglichkeiten: right, none, inherit*/
+    clear:left;                                             /*float left wird wieder aufgehoben*/
+}
+
+/*Flexbox*/
+#box2{
+    display: flex;
+}
+
+/*Eplizite Positionierung*/
+#box3{
+    position: relative;                                     /*Wird als erstes Bezugsobjekt gesetzt, bleibt im Textfluss*/
+    top:10px;                                               /*Wird um 10px nach unten verschoben; bottom:10px*/
+    left:10px;                                              /*Wird um 10px nach rechts verschoben; right:10px*/
+}
+
+#box4{
+    position:absolute;                                      /*Bezieht sich auf das übergeordnete Element(#Box3)*, wird danach ausgerichtet/
+    top:10px;                                               /*Insgesamt 20px verschoben(10px von Box3 + 10px von Box4)*/
+    left:10px;
+}
+
+
+/*---------------------------------------------------Listen-------------------------------------------------------------------------------------*/
+#navbar ul {
+    list-style-type: none;                                   /*Aufzählungszeichen werden entfernt*/
+
+}
+
+#navbar ul li {
+    display: inline-block;                                  /*Die li werden so formatiert, dass sie untereinander angezeigt werden*/
+    background-color: bisque;
+    padding: 5px 20px;
+    margin-right: 1em;                                      /*Die obersten Menüpunkte haben nur rechts einen Abstand, damit links direkt am Bildschirm angeschlossen wird*/
+    position: relative;                                     /*Die obersten li müssen relativ gesetzt werden, damit die Unterpunkte einen Bezugspunkt haben*/
+}
+
+#navbar ul li ul {
+    position: absolute;                                     /*Position muss absolut gesetzt werden, da die Unterpunkte direkt unter den Überpunkten geordnet werden müssen, ansonsten */
+    left: 0;                                                /*Offset von Links im Bezug auf li auf 0 gesetzt, damit sie nicht versetzt unter Oberpunkten erscheinen*/
+    top: 100%;                                              /*Top auf 100%, da sonst die Unterpunkte in die Überpunkte ragen*/
+    width: 10vw;                                            /*Anzeigebreite der Unterpunkte festgelegt*/
+}
+
+#navbar ul li ul li {
+    width: 100%;
+    background-color: rgb(179, 174, 169);
+    border-bottom: 2px solid black;
+}
+
+#navbar ul li ul {
+    display: none;                                          /*Die Untepunkte werden ausgeblendet*/
+}
+
+#navbar ul li:hover ul {
+    display: block;                                         /*Die Unterpunkte werden beim Überfahren eingeblendet - vgl. #navbar ul li*/
+}
+
+
+#navbar ul li:hover {
+    background-color: rgb(233, 138, 22);
+}
+
+#navbar a {
+    text-decoration: none;                                  /*Die Unterstreichungen des Links werden entfernt*/
+    font-size: 1.2em;
+    color: black;
+}
+
+/*Bei mehrgliedriger Liste einfügen und ggf. anpassen*/
+#navbar ul li ul li ul{
+    left:100%;
+    top:0%;
+}
+
+#navbar ul li ul li:hover ul{
+    display: inline-block;
+}
+
+/*------------------------------------------------Formulare---------------------------------------------------------*/
+#Box6{
+    z-index: 100;                                           /*Holt ein Element in den Vordergrund, je größer die Zahl, desto*/
+}
