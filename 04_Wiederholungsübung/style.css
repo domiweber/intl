@@ -1,0 +1,77 @@
+* {
+    padding:0;
+    margin: 0;
+}
+
+#bloecke {
+    position: relative;
+}
+
+#bloecke div {
+    width: calc(98% - 4em);
+    margin: 1%;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+#div01 {
+    background-color: aqua;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+
+}
+
+#div02 {
+    background-color: rgb(204, 255, 0);
+    position: absolute;
+    top: 2em;
+    left: 2em;
+}
+
+#div03 {
+    background-color: rgb(72, 0, 255);
+    position: absolute;
+    top: 3em;
+    left: 3em;
+}
+
+#div04 {
+    background-color: rgb(255, 77, 0);
+    position: absolute;
+    top: 4em;
+    left: 4em;
+}
+
+#div05 {
+    background-color: rgb(0, 255, 64);
+    position: absolute;
+    top: 5em;
+    left: 5em;
+}
+
+#bloecke div:hover {
+    z-index: 100;
+}
+
+@media screen and (min-width: 800px){
+    #bloecke {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #bloecke > div {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin:0;
+    }
+
+    #bloecke > div:first-child {
+        grid-column: 1/-1;
+    }
+}
+
+

@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#div01{
+    background-color: aqua;
+}
+
+#div02{
+    background-color: green;
+    top: 1em;
+    left: 1em;
+}
+
+#div03{
+    background-color: brown;
+    top: 2em;
+    left: 2em;
+}
+
+#div04{
+    background-color: yellow;
+    top: 3em;
+    left: 3em;
+}
+
+#div05{
+    background-color: blanchedalmond;
+    top: 4em;
+    left: 4em;
+}
+
+#bloecke{
+    position: relative;
+    margin: 2em;
+    
+}
+
+#bloecke div{
+    position: absolute;
+    min-height: 50px;
+}
+
+#bloecke div:hover{
+    z-index: 100;
+}
+
+@media screen and (min-height: 500px) { /*orientation:landscape = Bei Querformat; max-height:800px = Bis zu einer einer Höhe<= 800px*/               
+    #bloecke{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #bloecke div{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #bloecke div:first-child{
+        grid-column: 1/-1;
+    }
+}

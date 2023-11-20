@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="rahmen">
+        <div id="ucformular">
+            <h1>Formularstyling</h1>
+            <form id="formular" action="formular.php" method="POST">
+                <label for="vorname">Vorname</label><input type="text" name="vorname" id="">
+                <label for="nachname">Name</label><input type="text" name="nachname" id="">
+                <label for="klasse">Klasse</label><input type="text" name="klasse" id="">
+                <label for="email">Email</label><input type="text" name="email" id="">
+
+                <label for="fachrichtung">Fachrichtung</label>
+                <select name="fachrichtung" id="">
+                    <option value="informatik">Informatik</option>
+                    <option value="elektrotechnik">Elektrotechnik</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+
+                <label>Fächer</label>
+                <div class="radio">
+                    <input type="checkbox" name="pro" id="" value="pro"><label for="pro">Programmieren</label>
+                    <input type="checkbox" name="intt" id="" value="inttv"><label for="intt">Internettechnologie</label>
+                    <input type="checkbox" name="db" id="" value="dbv"><label for="db">Datenbanken</label>
+                    <input type="checkbox" name="ba" id="" value="ba"><label for="ba">Betriebssysteme</label>
+                </div>
+                <label>Tag Abends</label>
+                <div class="radio">
+                    <input type="radio" name="tagabend" id="" value="tag"><label for="tagabend">Tag</label>
+                    <input type="radio" name="tagabend" id="" value="abend"><label for="tagabend">Abend</label>
+                </div>
+                <div><button type="submit">Fertig</button></div><div></div>
+        </div>
+
+        
+
+
+
+        </form>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
